@@ -1,0 +1,25 @@
+<div class="login-wrapper">
+    <mat-card>
+        <h2>ADMIN LOGIN</h2>
+        <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>EMAIL :</mat-label>
+                <input matInput type="email" formControlName="email" />
+                <mat-error *ngIf="LoginForm.get('email')?.hasError('required')">
+                    Email is required
+                </mat-error>
+                <mat-error *ngIf="LoginForm.get('email')?.hasError('email')">
+                    Invalid email format
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>PASSWORD :</mat-label>
+                <input matInput type="password" formControlName="password" />
+                <mat-error *ngIf="LoginForm.get('password')?.hasError('required')">
+                    Password is required
+                </mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary" class="full-width" type="submit">LOGIN</button>
+        </form>
+    </mat-card>
+</div>

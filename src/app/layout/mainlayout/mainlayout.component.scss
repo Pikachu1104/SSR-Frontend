@@ -1,0 +1,25 @@
+.app-container {
+    height: 100vh;
+}
+
+mat-sidenav {
+    width: 240px;
+    border-right: 1px solid #e0e0e0;
+    background: #fff;
+}
+
+mat-sidenav-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+app-header {
+    flex-shrink: 0;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 16px;
+    background-color: #fafafa;
+}
